@@ -20,39 +20,22 @@
     'g' => green
 */
 
-var initial_state = ['b', '.', '.', '.', '.'];
+var initial_state = ['g', 'g', 'g', '.', '.'];
 
 function main() {
 
 
-moveRight();
-moveRight();
-moveRight();
-moveRight();
-
-if(onBlue()){
-
-  useBlue();
-
-} else if (onGreen()){
-
-  useGreen();
-
-} 
-
-if (onBlue() || onGreen()){
-
-  draw();
-
-}
-
-if (!onBlue() || !onGreen()) {
-
+  moveRight();
   erase();
-
-}
-
-  //////////////////////////////// ////                          ////
+  useBlue();
+  draw();
+  moveRight();
+  moveRight();
+  useBlue();
+  draw();
+  
+  /////////////////////////////////
+  ////                          ////
  } //// v YOUR CODE BELOW HERE v /////                          ////
   //////////////////////////////////
 
