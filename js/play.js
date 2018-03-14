@@ -20,46 +20,163 @@
     'g' => green
 */
 
-var initial_state = ['b', '.', '.', '.', '.'];
+1. 
+var initial_state = ['.', '.', '.', '.', '.'];
 
-function main() {
+function main (){
 
+ for(let i = 0; i < initial_state.length; i++){
 
-moveRight();
-moveRight();
-moveRight();
-moveRight();
-
-if(onBlue()){
+  if(i==0) {
+    useBlue();
+    draw();
+  } else{
 
   useBlue();
+  moveRight();
+  draw();
+}
 
-} else if (onGreen()){
+ }
 
-  useGreen();
+}
 
-} 
 
-if (onBlue() || onGreen()){
+2.
 
+var initial_state = ['b', '.', '.', '.', '.'];
+
+function main (){
+
+ for(let i = 0; i < initial_state.length; i++){
+
+  if(i == 0 && onBlue()) {
+
+    useBlue()
+    moveRight();
+    draw();
+
+  } else if(i == 0 && onGreen())
+  {
+
+    useGreen();
+    moveRight();
+    draw();
+
+  }
+}
+}
+
+3. 
+
+var initial_state = ['.', '.', '.', '.', '.'];
+
+function main (){
+
+  var n = 2;
+
+ for(let i = 0; i < n; i++){
+
+    useBlue()
+    moveRight();
+    draw();
+
+  }
+
+
+var initial_state = ['.', '.', '.', '.', '.'];
+
+function main (){
+
+  var n = 3;
+
+ for(let i = 0; i < n; i++){
+
+    useBlue()
+    moveRight();
+    draw();
+
+  }
+
+4. 
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main (){
+
+for (let i = 0; i < initial_state.length; i++){
+
+if( i % 2 == 0){
+
+  erase();
+
+} else{
+
+  useBlue();
   draw();
 
 }
 
-if (!onBlue() || !onGreen()) {
-
-  erase();
+moveRight();
 
 }
 
-  //////////////////////////////// ////                          ////
- } //// v YOUR CODE BELOW HERE v /////                          ////
-  //////////////////////////////////
+5.
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main (){
+
+for(let i = 0; i < initial_state.length; i++)  {
+
+if( i % 2 !== 0){
+
+  erase();
+
+} else{
+
+  useBlue();
+  draw();
+
+}
+
+moveRight();
+
+}
+}
+
+6.
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main (){
+
+let n = 1
+for (let i = 0; i < initial_state.length; i = i + n){
 
 
+erase();
+moveRight();
 
-  //////////////////////////////////
-  ////                          ////
-  //// ^ YOUR CODE ABOVE HERE ^ ////
-  ////                          ////
-  ////////////////////////// // <--- be careful not to delete or comment-out this closing bracket!
+}
+
+} 
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main (){
+
+let n = 2
+for (let i = 0; i < initial_state.length; i++){
+
+if((i + 1) % n !== 0){
+
+erase();
+moveRight();
+
+}
+
+} 
+
+
+  
